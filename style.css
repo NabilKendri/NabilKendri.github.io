@@ -146,5 +146,7 @@ header {
 }
 .home-detail {
   transform: scale(1.15);
+}
   transform-origin: left center;
+
 }
