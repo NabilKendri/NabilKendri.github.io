@@ -48,12 +48,28 @@ header{
 .home-detail p{font-size:16px;line-height:1.8;color:#e6ecf7;margin:18px 0 26px;max-width:950px;}
 .home-detail ul{font-size:16px;color:#e6ecf7;margin:0 0 30px 18px;}
 
-.download-social{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
-.btn{
-  padding:12px 26px;border-radius:40px;border:2px solid #fff;
-  background:#fff;color:#333;text-decoration:none;font-weight:700;
-  box-shadow:0 0 14px #fff;transition:.25s;
+.download-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* center everything horizontally */
+  gap: 16px;
+  flex-wrap: wrap;           /* allows wrapping on small screens */
+  margin-top: 10px;
 }
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 40px;
+  border: 2px solid #fff;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 0 14px #fff;
+  transition: .25s;
+  text-align: center;
+}
+
 .btn:hover{background:transparent;color:#fff;box-shadow:none;}
 .social-icons a{
   display:inline-flex;justify-content:center;align-items:center;
@@ -77,3 +93,4 @@ header{
   .btn{padding:14px 38px;}
   .social-icons a{width:48px;height:48px;font-size:26px;}
 }
+
