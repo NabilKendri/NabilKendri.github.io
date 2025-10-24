@@ -1,15 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website Using HTML & CSS | Codehal</title>
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-    <link rel="stylesheet" href="./style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nabil Kendri — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fg: #f5f7fb;
+    --muted: #dbe2f1;
+    --card-bg: rgba(15, 23, 42, 0.55); /* darker for readability */
+    --radius: 28px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--fg);
+    background: #000 url("campus.png") center/cover no-repeat fixed;
+  }
+
+  /* Keep the hero content HIGHER on the page */
+  .hero{
+    min-height:100dvh;
+    display:grid;
+    align-items:start;              /* push up */
+    padding: clamp(16px, 3vw, 48px);
+  }
+
+  .card{
+    backdrop-filter: blur(14px) saturate(120%);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.05);
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: clamp(20px, 4vw, 56px);
+  }
+
+  /* Top nav */
+  .nav{
+    display:flex; gap: clamp(16px, 3vw, 48px);
+    justify-content:flex-end;
+    font-weight: 600;
+    margin-bottom: clamp(12px, 1.5vw, 20px);
+    font-size: clamp(14px, 1.3vw, 20px);
+  }
+  .nav a{color: var(--fg); text-decoration:none; opacity:.9}
+  .nav a.active{border-bottom: 3px solid var(--fg); padding-bottom: 6px}
+
+  /* BIG, FLUID TYPE */
+  h1{
+    margin: 0 0 clamp(8px, 1.8vw, 16px) 0;
+    font-weight: 900;
+    line-height: .95;
+    font-size: clamp(2.25rem, 9vw, 8rem); /* scales with screen */
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  h2{
+    margin: 0 0 clamp(18px, 2.5vw, 28px) 0;
+    font-weight: 800;
+    line-height: 1;
+    font-size: clamp(1.2rem, 4.2vw, 3.25rem);
+  }
+  p{
+    margin: 0;
+    font-size: clamp(1rem, 1.6vw, 1.5rem);
+    color: var(--muted);
+  }
+  strong{color: var(--fg)}
+
+  /* Interests list + spacing ABOVE buttons */
+  .interests{
+    margin-top: clamp(16px, 2.5vw, 28px);
+    margin-bottom: clamp(18px, 3.5vw, 40px); /* gap before buttons */
+    padding-left: 1.1em;
+    font-size: clamp(1rem, 1.6vw, 1.5rem);
+  }
+  .interests li{margin: .25em 0}
+
+  /* Buttons / icons */
+  .actions{
+    display:flex; flex-wrap:wrap; gap: clamp(10px, 1.2vw, 16px);
+  }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding: clamp(10px, 1.1vw, 14px) clamp(14px, 1.6vw, 18px);
+    font-size: clamp(0.95rem, 1.5vw, 1.2rem);  /* buttons grow too */
+    border-radius: 14px;
+    background: rgba(255,255,255,.12);
+    color:#fff; text-decoration:none;
+    border: 1px solid rgba(255,255,255,.2);
+    transition: transform .08s ease, background .2s ease;
+  }
+  .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.18)}
+  .icon{
+    width: clamp(22px, 2.5vw, 28px);
+    height: clamp(22px, 2.5vw, 28px);
+    display:inline-block;
+    margin-right: 10px;
+    filter: drop-shadow(0 1px 0 rgba(0,0,0,.5));
+  }
+
+  /* Ensure the whole card never feels tiny on huge screens */
+  @media (min-width: 1600px){
+    .card{padding: 64px}
+  }
+</style>
 </head>
 
 <body>
@@ -55,4 +159,5 @@
     </div>
 </body>
 </html>
+
 
