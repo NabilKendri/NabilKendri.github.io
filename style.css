@@ -116,21 +116,26 @@ header{
   }
 
   /* Icons centered under the button */
+@media (max-width: 600px){
+  /* Keep everything else unchanged */
+
   .social-icons{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 14px;
-    margin-left: 0 !important;
+    gap: 4vw;              /* scales with screen width */
+    margin-top: -2%;       /* lift icons closer to button */
+    margin-bottom: 6%;     /* consistent padding from bottom curve */
   }
 
   .social-icons a{
-    width: 44px;
-    height: 44px;
-    font-size: 22px;
-    margin: 0;
+    width: 11vw;           /* proportional icon size */
+    height: 11vw;
+    font-size: 5vw;        /* keeps the icons balanced visually */
   }
 }
+
+
 
 
 
