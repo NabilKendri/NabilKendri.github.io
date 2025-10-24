@@ -94,3 +94,48 @@ header{
   .social-icons a{width:48px;height:48px;font-size:26px;}
 }
 
+@media (max-width: 600px){
+  /* ...keep the rest of your mobile rules... */
+
+  /* More room at the bottom so the row doesn't touch the corner */
+  .home{
+    padding: 20px 6% 100px;   /* was 40px bottom */
+  }
+
+  /* Center the whole row + allow neat wrapping */
+  .download-social{
+    display: flex;
+    justify-content: center;  /* center horizontally */
+    align-items: center;
+    flex-wrap: wrap;          /* wrap to a second line if needed */
+    gap: 12px;                /* even spacing between items */
+    margin-top: 18px;
+  }
+
+  /* Make sure items don’t stretch weirdly */
+  .download-social > *{
+    flex: 0 0 auto;
+  }
+
+  /* Button sizing so it lines up well with icons */
+  .btn{
+    padding: 12px 26px;
+    min-width: 220px;         /* keeps a nice width */
+    text-align: center;
+  }
+
+  /* Tidy icon group */
+  .social-icons{
+    display: flex;
+    gap: 12px;
+  }
+  .social-icons a{
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    margin: 0;                /* remove stray margins */
+  }
+}
+
+
+
