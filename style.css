@@ -1,59 +1,101 @@
 /* ===== Base ===== */
-*{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",sans-serif;}
-html,body{height:100%;}
-body{
-  background:#000 url("background.jpg") center/cover no-repeat;
-  color:#fff;
-  padding:50px 5%;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+html, body { height: 100%; }
+body {
+  background: #000 url("background.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 50px 5%;
 }
 
 /* ===== Glass Card ===== */
-.container{
-  position:relative;
-  height:100%;
-  width:min(1200px,90vw);
-  margin:0 auto;
-  background:rgba(255,255,255,.10);
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:28px;
-  backdrop-filter:blur(24px);
-  -webkit-backdrop-filter:blur(24px);
-  overflow:hidden;
+.container {
+  position: relative;
+  height: 100%;
+  width: min(1200px, 90vw);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  overflow: hidden;
 }
 
 /* ===== Header (mobile-first: stacked, NOT absolute) ===== */
-header{
-  position:static;               /* <-- key change for phones */
-  width:100%;
-  padding:22px 6% 10px;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:10px;
-  z-index:10;
+header {
+  position: static;
+  width: 100%;
+  padding: 22px 6% 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  z-index: 10;
 }
-.logo{font-size:28px;font-weight:800;text-decoration:none;color:#fff;}
-.navbar{display:flex;flex-wrap:wrap;gap:14px;}
-.navbar a{
-  font-size:16px;font-weight:600;color:#fff;text-decoration:none;
-  border-bottom:1.5px solid transparent;transition:.2s;
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #fff;
 }
-.navbar a:hover,.navbar a.active{border-color:#fff;}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.navbar a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: .2s;
+}
+.navbar a:hover,
+.navbar a.active { border-color: #fff; }
 
 /* ===== Hero ===== */
-.home{display:flex;align-items:center;min-height:100%;padding:20px 6% 40px;}
-.home-img{display:none;}
-.home-detail h1{font-size:clamp(40px,12vw,100px);line-height:1.05;font-weight:800;}
-.home-detail h2{font-size:clamp(22px,6vw,50px);font-weight:700;margin-top:10px;}
-.home-detail p{font-size:16px;line-height:1.8;color:#e6ecf7;margin:18px 0 26px;max-width:950px;}
-.home-detail ul{font-size:16px;color:#e6ecf7;margin:0 0 30px 18px;}
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  padding: 20px 6% 40px;
+}
+.home-img { display: none; }
+.home-detail h1 {
+  font-size: clamp(40px, 12vw, 100px);
+  line-height: 1.05;
+  font-weight: 800;
+}
+.home-detail h2 {
+  font-size: clamp(22px, 6vw, 50px);
+  font-weight: 700;
+  margin-top: 10px;
+}
+.home-detail p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #e6ecf7;
+  margin: 18px 0 26px;
+  max-width: 950px;
+}
+.home-detail ul {
+  font-size: 16px;
+  color: #e6ecf7;
+  margin: 0 0 30px 18px;
+}
 
 .download-social {
   display: flex;
   align-items: center;
-  justify-content: center;   /* center everything horizontally */
+  justify-content: center;
   gap: 16px;
-  flex-wrap: wrap;           /* allows wrapping on small screens */
+  flex-wrap: wrap;
   margin-top: 10px;
 }
 
@@ -69,73 +111,99 @@ header{
   transition: .25s;
   text-align: center;
 }
-
-.btn:hover{background:transparent;color:#fff;box-shadow:none;}
-.social-icons a{
-  display:inline-flex;justify-content:center;align-items:center;
-  width:40px;height:40px;border:2px solid #fff;border-radius:50%;
-  color:#fff;text-decoration:none;font-size:22px;transition:.25s;
+.btn:hover {
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
 }
-.social-icons a:hover{background:#fff;color:#333;}
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  transition: .25s;
+}
+.social-icons a:hover {
+  background: #fff;
+  color: #333;
+}
 
 /* ===== Larger screens: switch to overlaid header ===== */
 @media (min-width: 768px){
-  header{
-    position:absolute; top:0; left:0;
-    flex-direction:row; align-items:center; justify-content:space-between;
-    padding:40px 7%;
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 7%;
   }
-  .logo{font-size:40px;}
-  .navbar{gap:0;}
-  .navbar a{margin-left:32px;font-size:20px;border-bottom-width:2px;}
+  .logo { font-size: 40px; }
+  .navbar { gap: 0; }
+  .navbar a { margin-left: 32px; font-size: 20px; border-bottom-width: 2px; }
 
-  .home{padding:120px 7% 60px;}
-  .btn{padding:14px 38px;}
-  .social-icons a{width:48px;height:48px;font-size:26px;}
+  .home { padding: 120px 7% 60px; }
+  .btn { padding: 14px 38px; }
+  .social-icons a { width: 48px; height: 48px; font-size: 26px; }
 }
 
+/* ===== Mobile Adjustments ===== */
 @media (max-width: 600px){
-@media (max-width: 600px){
-  /* More space above the bottom curve */
-  .home{ padding: 20px 6% 130px; }
-
-  /* Stack button & icons vertically */
-  .download-social{
+  .home {
+    padding: 20px 6% 100px;
+  }
+  .download-social {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 10px;       /* space between button and icons */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
     margin-top: 18px;
   }
-
-  .btn{
+  .download-social > * {
+    flex: 0 0 auto;
+  }
+  .btn {
     padding: 12px 26px;
-    min-width: 260px;
+    min-width: 220px;
     text-align: center;
   }
-
-  /* Icons centered under the button */
-@media (max-width: 600px){
-  /* Keep everything else unchanged */
-
-  .social-icons{
+  .social-icons {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4vw;              /* scales with screen width */
-    margin-top: -2%;       /* lift icons closer to button */
-    margin-bottom: 6%;     /* consistent padding from bottom curve */
+    gap: 12px;
   }
-
-  .social-icons a{
-    width: 11vw;           /* proportional icon size */
-    height: 11vw;
-    font-size: 5vw;        /* keeps the icons balanced visually */
+  .social-icons a {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    margin: 0;
   }
 }
 
+/* --- PHONE-ONLY FIX: GitHub & LinkedIn alignment --- */
+@media (max-width: 600px){
+  .home-detail .social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    width: 100%;
+    margin: -1.5vh auto 5.5vh !important;
+  }
 
+  .home-detail .social-icons a{
+    width: 10.5vw;
+    height: 10.5vw;
+    font-size: 5vw;
+  }
+}
 
 
 
