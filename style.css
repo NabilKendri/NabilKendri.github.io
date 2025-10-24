@@ -1,106 +1,79 @@
-/* ========== Base ========== */
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: "Poppins", sans-serif; }
-html, body { height: 100%; }
+/* ===== Base ===== */
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",sans-serif;}
+html,body{height:100%;}
 body{
-  background: #000 url("background.jpg") center/cover no-repeat;
-  color: #fff;
-  padding: 50px 5%;
+  background:#000 url("background.jpg") center/cover no-repeat;
+  color:#fff;
+  padding:50px 5%;
 }
 
-/* ========== Glass Card ========== */
+/* ===== Glass Card ===== */
 .container{
-  position: relative;
-  height: 100%;
-  width: min(1200px, 90vw);
-  margin: 0 auto;
-  background: rgba(255,255,255,.10);
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 28px;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  overflow: hidden;
+  position:relative;
+  height:100%;
+  width:min(1200px,90vw);
+  margin:0 auto;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:28px;
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  overflow:hidden;
 }
 
-/* ========== Header ========== */
+/* ===== Header (mobile-first: stacked, NOT absolute) ===== */
 header{
-  position: absolute; top: 0; left: 0; width: 100%;
-  padding: 40px 7%;
-  display: flex; justify-content: space-between; align-items: center;
-  z-index: 10;
+  position:static;               /* <-- key change for phones */
+  width:100%;
+  padding:22px 6% 10px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+  z-index:10;
 }
-.logo{ font-size: 40px; font-weight: 800; text-decoration: none; color: #fff; }
-.navbar{ display: flex; align-items: center; }
+.logo{font-size:28px;font-weight:800;text-decoration:none;color:#fff;}
+.navbar{display:flex;flex-wrap:wrap;gap:14px;}
 .navbar a{
-  font-size: 20px; font-weight: 600; color: #fff; text-decoration: none;
-  margin-left: 32px; border-bottom: 2px solid transparent; transition: .2s;
+  font-size:16px;font-weight:600;color:#fff;text-decoration:none;
+  border-bottom:1.5px solid transparent;transition:.2s;
 }
-.navbar a:hover, .navbar a.active{ border-color: #fff; }
+.navbar a:hover,.navbar a.active{border-color:#fff;}
 
-/* ========== Hero ========== */
-.home{
-  display: flex; align-items: center; min-height: 100%;
-  padding: 120px 7% 60px;   /* leaves room for absolute header */
-}
-.home-img{ display: none; }
+/* ===== Hero ===== */
+.home{display:flex;align-items:center;min-height:100%;padding:20px 6% 40px;}
+.home-img{display:none;}
+.home-detail h1{font-size:clamp(40px,12vw,100px);line-height:1.05;font-weight:800;}
+.home-detail h2{font-size:clamp(22px,6vw,50px);font-weight:700;margin-top:10px;}
+.home-detail p{font-size:16px;line-height:1.8;color:#e6ecf7;margin:18px 0 26px;max-width:950px;}
+.home-detail ul{font-size:16px;color:#e6ecf7;margin:0 0 30px 18px;}
 
-.home-detail h1{ font-size: clamp(56px, 8vw, 100px); line-height: 1.05; font-weight: 800; }
-.home-detail h2{ font-size: clamp(28px, 4vw, 50px); font-weight: 700; margin-top: 10px; }
-.home-detail p{
-  font-size: clamp(16px, 2vw, 22px);
-  line-height: 1.8; color: #e6ecf7; margin: 20px 0 30px; max-width: 950px;
-}
-.home-detail ul{ font-size: clamp(16px, 1.8vw, 20px); color: #e6ecf7; margin: 0 0 35px 18px; }
-
-/* Buttons + social */
-.download-social{ display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.download-social{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
 .btn{
-  padding: 14px 38px; border-radius: 40px; border: 2px solid #fff;
-  background: #fff; color: #333; text-decoration: none; font-weight: 700;
-  box-shadow: 0 0 14px #fff; transition: .25s;
+  padding:12px 26px;border-radius:40px;border:2px solid #fff;
+  background:#fff;color:#333;text-decoration:none;font-weight:700;
+  box-shadow:0 0 14px #fff;transition:.25s;
 }
-.btn:hover{ background: transparent; color: #fff; box-shadow: none; }
+.btn:hover{background:transparent;color:#fff;box-shadow:none;}
 .social-icons a{
-  display: inline-flex; justify-content: center; align-items: center;
-  width: 48px; height: 48px; border: 2px solid #fff; border-radius: 50%;
-  color: #fff; text-decoration: none; font-size: 26px; transition: .25s;
+  display:inline-flex;justify-content:center;align-items:center;
+  width:40px;height:40px;border:2px solid #fff;border-radius:50%;
+  color:#fff;text-decoration:none;font-size:22px;transition:.25s;
 }
-.social-icons a:hover{ background: #fff; color: #333; }
+.social-icons a:hover{background:#fff;color:#333;}
 
-/* ========== Responsive Tweaks ========== */
-/* Tablet / split window */
-@media (max-width: 992px){
-  .container{ width: 94vw; border-radius: 22px; }
-  header{ padding: 30px 6%; }
-  .navbar a{ margin-left: 22px; font-size: 18px; }
-  .home{ padding: 110px 6% 50px; }
-}
-
-/* Phones */
-@media (max-width: 600px){
-  /* make header flow with content so it doesn't overlap */
+/* ===== Larger screens: switch to overlaid header ===== */
+@media (min-width: 768px){
   header{
-    position: static;
-    padding: 22px 6% 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    position:absolute; top:0; left:0;
+    flex-direction:row; align-items:center; justify-content:space-between;
+    padding:40px 7%;
   }
-  .logo{ font-size: 28px; }
-  .navbar{
-    flex-wrap: wrap; gap: 14px;
-  }
-  .navbar a{
-    margin-left: 0; font-size: 16px; border-width: 1.5px;
-  }
+  .logo{font-size:40px;}
+  .navbar{gap:0;}
+  .navbar a{margin-left:32px;font-size:20px;border-bottom-width:2px;}
 
-  .home{
-    padding: 20px 6% 40px;          /* no extra space needed now */
-  }
-  .home-detail h1{ font-size: clamp(40px, 12vw, 56px); }
-  .home-detail h2{ font-size: clamp(22px, 6vw, 32px); }
-  .home-detail p{ font-size: 16px; max-width: 100%; }
-  .home-detail ul{ font-size: 16px; margin-left: 16px; }
-
-  .btn{ padding: 12px 26px; font-size: 16px; }
-  .social-icons a{ width: 40px; height: 40px; font-size: 22px; }
+  .home{padding:120px 7% 60px;}
+  .btn{padding:14px 38px;}
+  .social-icons a{width:48px;height:48px;font-size:26px;}
 }
