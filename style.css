@@ -1,155 +1,105 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Poppins",sans-serif;
-}
-
-/* Full-screen background */
+/* ========= Base ========= */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 body{
-  height:100vh;
-  background:url("background.jpg") no-repeat center / cover;
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:#f5f7fb;
+  /* Make sure campus.png exists in the same folder */
+  background:#000 url("campus.png") center/cover no-repeat fixed;
   padding:50px 5%;
 }
 
-/* Glass container */
+/* ========= Glass Card Container ========= */
 .container{
   position:relative;
   height:100%;
-  width:90vw;               /* NEW */
-  margin:0 auto;            /* NEW */
-  background:rgba(255,255,255,.1);
-  border:2px solid rgba(255,255,255,.2);
-  border-radius:30px;
-  backdrop-filter:blur(30px);
+  width: min(1200px, 90vw);
+  margin:0 auto;
+  background:rgba(15,23,42,.55);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:28px;
+  backdrop-filter:blur(14px) saturate(120%);
+  -webkit-backdrop-filter:blur(14px) saturate(120%);
+  box-shadow:0 30px 80px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.05);
   overflow:hidden;
 }
 
-/* Header INSIDE the card (no solid bar) */
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 60px 7%;         /* was ~25px — now thicker */
-  background: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
+/* ========= Header (inside glass) ========= */
+header{
+  position:absolute; top:0; left:0; width:100%;
+  padding:60px 7%;
+  display:flex; justify-content:space-between; align-items:center;
+  z-index:10; background:transparent;
 }
+.logo{
+  font-size:56px; font-weight:800; color:#fff; text-decoration:none;
+}
+.navbar a{
+  font-size:22px; color:#fff; text-decoration:none; font-weight:600;
+  margin-left:40px; border-bottom:2px solid transparent; transition:.25s;
+}
+.navbar a:hover, .navbar a.active{ border-color:#fff; }
 
-.logo {
-  font-size: 56px;      /* was ~40 */
-  font-weight: 700;        /* was ~25px — much bigger */
-  color: #fff;
-  text-decoration: none;
-}
-
-.navbar a {
-  font-size: 28px;          /* larger link text */
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 55px;        /* more space between links */
-  border-bottom: 2px solid transparent;
-  transition: 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  border-color: #fff;
-}
-/* Hero area */
+/* ========= Hero ========= */
 .home{
-  display:flex;
-  align-items:center;
-  gap:50px;
-  /* push content below the absolute header */
-  padding:160px 7% 70px;                     /* was 50px 5% 0 */
-  min-height:100%;                            /* was height: 100; (no unit) */
+  display:flex; align-items:center; gap:50px;
+  padding:160px 7% 70px; /* push below absolute header */
+  min-height:100%;
   color:#fff;
 }
+.home-img{ display:none; } /* no photo for now */
 
-/* Hide the photo section (you said: no photo) */
-.home-img{ display:none; }
-
-.home-detail h1 {
- font-size: clamp(90px, 10vw, 140px);
-  font-weight: 800;
-  line-height: 1.05;
-  color:#fff;
+/* Headings with sane fluid sizes */
+.home-detail h1{
+  font-size: clamp(2.4rem, 8vw, 5.5rem);
+  font-weight:900; line-height:.95; letter-spacing:-.02em; margin:0 0 .25em 0;
 }
-
 .home-detail h2{
-  font-size: clamp(52px, 5vw, 72px);
-  font-weight: 700;
-  color:#fff;
-  margin-top: 14px;
+  font-size: clamp(1.4rem, 4.6vw, 2.6rem);
+  font-weight:800; margin:0 0 .9em 0;
 }
-
 .home-detail p{
-  font-size: clamp(22px, 2vw, 28px);
-  line-height: 1.85;
-  color:#f1f1f1;
-  margin: 22px 0 34px;
-  max-width: 1100px;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  line-height:1.85; color:#dbe2f1; margin: 0 0 1.2em 0; max-width: 1100px;
 }
-
-.home-detail .download-social{
-  display:flex;
-  align-items:center;
-}
-
-.btn {
-  display: inline-block;
-  padding: 20px 56px;     /* bigger button */
-  background: #fff;
-  border: 2px solid #fff;
-  border-radius: 44px;
-  box-shadow: 0 0 18px #fff;
-  color: #333;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 24px;         /* larger text inside button */
-  transition: 0.5s;
-}
-.btn:hover{
-  background:transparent;
-  box-shadow:none;
-  color:#fff;
-}
-
 .home-detail ul{
-  font-size: clamp(21px, 1.7vw, 26px);
-  color:#f1f1f1;
-  margin-bottom: 40px;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color:#e9eefc; margin: 0 0 1.6em 1.2em;
 }
 
-/* ICONS (GitHub, LinkedIn) */
-.home-detail .social-icons {
-  margin-left: 28px;
-}
-.home-detail .social-icons a {
-  display: inline-flex;
-  padding: 18px;           /* bigger icon circles */
-  border: 2px solid #fff;
-  border-radius: 50%;
-  font-size: 32px;         /* larger icons */
-  color: #fff;
-  text-decoration: none;
-  margin: 0 12px;
-  transition: 0.5s;
-}
-.home-detail .social-icons a:hover {
-  background: #fff;
-  box-shadow: 0 0 15px #fff;
-  color: #333;
-}
-.home-detail {
-  transform: scale(1.15);
-}
-  transform-origin: left center;
+/* Optional slight scale to make text stand out */
+.home-detail{ transform: scale(1.05); transform-origin: left center; }
 
-}
+/* ========= Buttons & Icons ========= */
+.download-social{ display:flex; align-items:center; gap:18px; }
 
+.btn{
+  display:inline-block;
+  padding: 16px 38px;
+  background:#fff;
+  border:2px solid #fff;
+  border-radius: 36px;
+  box-shadow:0 0 14px #fff;
+  color:#333; text-decoration:none; font-weight:700;
+  font-size: clamp(.95rem, 1.4vw, 1.1rem);
+  transition:.3s;
+}
+.btn:hover{ background:transparent; box-shadow:none; color:#fff; }
+
+.social-icons{ margin-left:10px; }
+.social-icons a{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:52px; height:52px;
+  border:2px solid #fff; border-radius:50%;
+  color:#fff; text-decoration:none; font-size:28px; margin:0 8px; transition:.3s;
+}
+.social-icons a:hover{ background:#fff; color:#333; box-shadow:0 0 12px #fff; }
+
+/* ========= Responsive polish ========= */
+@media (max-width: 720px){
+  header{ padding:26px 6%; }
+  .navbar a{ margin-left:18px; font-size:18px; }
+  .home{ padding:130px 6% 40px; }
+  .btn{ padding:14px 28px; }
+}
