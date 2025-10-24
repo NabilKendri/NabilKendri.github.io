@@ -16,11 +16,13 @@ body{
 .container{
   position:relative;
   height:100%;
-  background:rgba(255,255,255,.1);          /* keep your color */
+  width:90vw;               /* NEW */
+  margin:0 auto;            /* NEW */
+  background:rgba(255,255,255,.1);
   border:2px solid rgba(255,255,255,.2);
   border-radius:30px;
   backdrop-filter:blur(30px);
-  overflow:hidden;                           /* keeps rounded corners clean */
+  overflow:hidden;
 }
 
 /* Header INSIDE the card (no solid bar) */
@@ -150,3 +152,4 @@ header {
   transform-origin: left center;
 
 }
+
