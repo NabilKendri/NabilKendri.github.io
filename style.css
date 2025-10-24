@@ -1,20 +1,18 @@
-/* ========= Base ========= */
-* { box-sizing: border-box; }
-html, body { height: 100%; }
+*{box-sizing:border-box}
+html,body{height:100%}
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:#f5f7fb;
-  /* Make sure campus.png exists in the same folder */
-  background:#000 url("campus.png") center/cover no-repeat fixed;
+  background:#000 url("campus.png") center/cover no-repeat fixed; /* ensure this file exists */
   padding:50px 5%;
 }
 
-/* ========= Glass Card Container ========= */
+/* Glass container */
 .container{
   position:relative;
   height:100%;
-  width: min(1200px, 90vw);
+  width:min(1200px, 90vw);
   margin:0 auto;
   background:rgba(15,23,42,.55);
   border:1px solid rgba(255,255,255,.15);
@@ -25,81 +23,24 @@ body{
   overflow:hidden;
 }
 
-/* ========= Header (inside glass) ========= */
+/* Header */
 header{
   position:absolute; top:0; left:0; width:100%;
   padding:60px 7%;
   display:flex; justify-content:space-between; align-items:center;
-  z-index:10; background:transparent;
 }
-.logo{
-  font-size:56px; font-weight:800; color:#fff; text-decoration:none;
-}
-.navbar a{
-  font-size:22px; color:#fff; text-decoration:none; font-weight:600;
-  margin-left:40px; border-bottom:2px solid transparent; transition:.25s;
-}
-.navbar a:hover, .navbar a.active{ border-color:#fff; }
+.logo{font-size:56px; font-weight:800; color:#fff; text-decoration:none}
+.navbar a{font-size:22px; color:#fff; text-decoration:none; font-weight:600; margin-left:40px; border-bottom:2px solid transparent; transition:.25s}
+.navbar a:hover,.navbar a.active{border-color:#fff}
 
-/* ========= Hero ========= */
-.home{
-  display:flex; align-items:center; gap:50px;
-  padding:160px 7% 70px; /* push below absolute header */
-  min-height:100%;
-  color:#fff;
-}
-.home-img{ display:none; } /* no photo for now */
-
-/* Headings with sane fluid sizes */
-.home-detail h1{
-  font-size: clamp(2.4rem, 8vw, 5.5rem);
-  font-weight:900; line-height:.95; letter-spacing:-.02em; margin:0 0 .25em 0;
-}
-.home-detail h2{
-  font-size: clamp(1.4rem, 4.6vw, 2.6rem);
-  font-weight:800; margin:0 0 .9em 0;
-}
-.home-detail p{
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
-  line-height:1.85; color:#dbe2f1; margin: 0 0 1.2em 0; max-width: 1100px;
-}
-.home-detail ul{
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
-  color:#e9eefc; margin: 0 0 1.6em 1.2em;
-}
-
-/* Optional slight scale to make text stand out */
-.home-detail{ transform: scale(1.05); transform-origin: left center; }
-
-/* ========= Buttons & Icons ========= */
-.download-social{ display:flex; align-items:center; gap:18px; }
-
-.btn{
-  display:inline-block;
-  padding: 16px 38px;
-  background:#fff;
-  border:2px solid #fff;
-  border-radius: 36px;
-  box-shadow:0 0 14px #fff;
-  color:#333; text-decoration:none; font-weight:700;
-  font-size: clamp(.95rem, 1.4vw, 1.1rem);
-  transition:.3s;
-}
-.btn:hover{ background:transparent; box-shadow:none; color:#fff; }
-
-.social-icons{ margin-left:10px; }
-.social-icons a{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:52px; height:52px;
-  border:2px solid #fff; border-radius:50%;
-  color:#fff; text-decoration:none; font-size:28px; margin:0 8px; transition:.3s;
-}
-.social-icons a:hover{ background:#fff; color:#333; box-shadow:0 0 12px #fff; }
-
-/* ========= Responsive polish ========= */
-@media (max-width: 720px){
-  header{ padding:26px 6%; }
-  .navbar a{ margin-left:18px; font-size:18px; }
-  .home{ padding:130px 6% 40px; }
-  .btn{ padding:14px 28px; }
-}
+/* Hero content */
+.home{display:flex; align-items:center; padding:160px 7% 70px; min-height:100%}
+.home-detail h1{font-size:clamp(2.4rem, 8vw, 5.5rem); font-weight:900; line-height:.95; margin:0 0 .25em}
+.home-detail h2{font-size:clamp(1.4rem, 4.6vw, 2.6rem); font-weight:800; margin:0 0 .9em}
+.home-detail p{font-size:clamp(1rem, 1.6vw, 1.25rem); line-height:1.85; color:#dbe2f1; margin:0 0 1.2em; max-width:1100px}
+.home-detail ul{font-size:clamp(1rem, 1.6vw, 1.2rem); color:#e9eefc; margin:0 0 1.6em 1.2em}
+.download-social{display:flex; align-items:center; gap:18px}
+.btn{display:inline-block; padding:16px 38px; background:#fff; border:2px solid #fff; border-radius:36px; color:#333; text-decoration:none; font-weight:700; font-size:clamp(.95rem, 1.4vw, 1.1rem); transition:.3s; box-shadow:0 0 14px #fff}
+.btn:hover{background:transparent; color:#fff; box-shadow:none}
+.social-icons a{display:inline-flex; align-items:center; justify-content:center; width:52px; height:52px; border:2px solid #fff; border-radius:50%; color:#fff; text-decoration:none; font-size:28px; margin:0 8px; transition:.3s}
+.social-icons a:hover{background:#fff; color:#333; box-shadow:0 0 12px #fff}
