@@ -95,47 +95,42 @@ header{
 }
 
 @media (max-width: 600px){
-  /* ...keep the rest of your mobile rules... */
+  /* more room above the rounded bottom */
+  .home{ padding: 20px 6% 150px; }
 
-  /* More room at the bottom so the row doesn't touch the corner */
-  .home{
-    padding: 20px 6% 100px;   /* was 40px bottom */
-  }
-
-  /* Center the whole row + allow neat wrapping */
+  /* stack: button first, icons below, all centered */
   .download-social{
     display: flex;
-    justify-content: center;  /* center horizontally */
+    flex-direction: column;     /* stack */
     align-items: center;
-    flex-wrap: wrap;          /* wrap to a second line if needed */
-    gap: 12px;                /* even spacing between items */
+    justify-content: center;
+    gap: 14px;
     margin-top: 18px;
   }
 
-  /* Make sure items don’t stretch weirdly */
-  .download-social > *{
-    flex: 0 0 auto;
-  }
-
-  /* Button sizing so it lines up well with icons */
   .btn{
     padding: 12px 26px;
-    min-width: 220px;         /* keeps a nice width */
+    min-width: 260px;           /* comfy width on phone */
     text-align: center;
   }
 
-  /* Tidy icon group */
   .social-icons{
     display: flex;
-    gap: 12px;
+    justify-content: center;    /* center the icon row */
+    gap: 14px;
+    width: 100%;
+    margin-left: 0 !important;  /* kill any leftover offset */
   }
+
   .social-icons a{
     width: 44px;
     height: 44px;
     font-size: 22px;
-    margin: 0;                /* remove stray margins */
+    margin: 0;
   }
 }
+
+
 
 
 
