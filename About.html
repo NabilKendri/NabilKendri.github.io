@@ -8,161 +8,142 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="container">
-    <header>
-      <a href="index.html" class="logo">Portfolio.</a>
-      <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="About.html" class="active">About</a>
-        <a href="Portfolio.html">Portfolio</a>
-        <a href="Contact.html">Contact</a>
-      </nav>
-    </header>
+<body class="inner">
 
-    <div class="page-content">
+  <header class="site-header">
+    <a href="index.html" class="logo">Portfolio.</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="About.html" class="active">About</a>
+      <a href="Portfolio.html">Portfolio</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
 
-      <!-- Bio -->
-      <section>
-        <h2 class="section-title">About Me</h2>
-        <p class="about-bio-text">
-          I'm <strong>Nabil El Khalil Kendri</strong>, a B.Sc. Data Science student at Concordia University
-          (2024–2027), passionate about building intelligent, data-driven systems. I bridge the gap between raw data
-          and actionable insight — through machine learning, predictive modeling, and full-stack engineering — and I
-          thrive when a project spans the entire pipeline from data wrangling to deployment.
-        </p>
-      </section>
+  <main class="full-page">
 
-      <!-- Skills -->
-      <section>
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-group">
-          <div>
-            <span class="skill-category-label">Programming Languages</span>
-            <div class="skill-tags">
-              <span>Python</span>
-              <span>Java</span>
-              <span>JavaScript</span>
-              <span>R</span>
-              <span>SQL</span>
-              <span>HTML</span>
-              <span>CSS</span>
-            </div>
-          </div>
-          <div>
-            <span class="skill-category-label">Frameworks &amp; Libraries</span>
-            <div class="skill-tags">
-              <span>scikit-learn</span>
-              <span>PyTorch</span>
-              <span>TensorFlow</span>
-              <span>FastAPI</span>
-              <span>Pandas</span>
-              <span>NumPy</span>
-              <span>Node.js</span>
-              <span>Express</span>
-              <span>AJAX</span>
-            </div>
-          </div>
-          <div>
-            <span class="skill-category-label">Tools &amp; IDEs</span>
-            <div class="skill-tags">
-              <span>VS Code</span>
-              <span>IntelliJ</span>
-              <span>Eclipse</span>
-              <span>MATLAB</span>
-              <span>Git</span>
-              <span>Photoshop</span>
-              <span>AutoCAD</span>
-            </div>
-          </div>
-          <div>
-            <span class="skill-category-label">Languages</span>
-            <div class="skill-tags">
-              <span>French — Native</span>
-              <span>English — Professional</span>
-              <span>Arabic — Intermediate</span>
-            </div>
+    <!-- Bio -->
+    <section>
+      <h2 class="section-title">About Me</h2>
+      <p class="about-bio-text">
+        I'm <strong>Nabil El Khalil Kendri</strong>, a B.Sc. Data Science student at Concordia University
+        (2024–2027), passionate about building intelligent, data-driven systems. I bridge the gap between raw data
+        and actionable insight — through machine learning, predictive modeling, and full-stack engineering — and I
+        thrive when a project spans the entire pipeline from data wrangling to deployment.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-group">
+        <div>
+          <span class="skill-category-label">Programming Languages</span>
+          <div class="skill-tags">
+            <span>Python</span><span>Java</span><span>JavaScript</span>
+            <span>R</span><span>SQL</span><span>HTML</span><span>CSS</span>
           </div>
         </div>
-      </section>
-
-      <!-- Education -->
-      <section>
-        <h2 class="section-title">Education</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div>
-              <div class="timeline-header">
-                <span class="timeline-title">B.Sc. Computer Science Joint Major Data Science</span>
-                <span class="timeline-date">2024 – 2027</span>
-              </div>
-              <span class="timeline-sub">Concordia University · Montreal, Canada</span>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div>
-              <div class="timeline-header">
-                <span class="timeline-title">DEC, Business Management</span>
-                <span class="timeline-date">2021 – 2023</span>
-              </div>
-              <span class="timeline-sub">Collège Ahuntsic · Montreal, Canada</span>
-            </div>
+        <div>
+          <span class="skill-category-label">Frameworks &amp; Libraries</span>
+          <div class="skill-tags">
+            <span>scikit-learn</span><span>PyTorch</span><span>TensorFlow</span>
+            <span>FastAPI</span><span>Pandas</span><span>NumPy</span>
+            <span>Node.js</span><span>Express</span><span>AJAX</span>
           </div>
         </div>
-      </section>
-
-      <!-- Experience -->
-      <section>
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div>
-              <div class="timeline-header">
-                <span class="timeline-title">Sales Representative</span>
-                <span class="timeline-date">July 2024 – Present</span>
-              </div>
-              <span class="timeline-sub">Bravad Technologies · Montreal, Canada</span>
-              <ul class="timeline-bullets">
-                <li>Advised customers on TELUS/Koodo products, plans, and device upgrades.</li>
-                <li>Consistently ranked top 3 seller on team; managed end-to-end sales workflows including onboarding and after-sales support.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div>
-              <div class="timeline-header">
-                <span class="timeline-title">Marketing Coordinator — New Construction</span>
-                <span class="timeline-date">Feb 2024 – June 2024</span>
-              </div>
-              <span class="timeline-sub">OSL Bell Canada · Montreal, Canada</span>
-              <ul class="timeline-bullets">
-                <li>Delivered Bell Canada services to new construction clients with personalized follow-ups.</li>
-                <li>Strengthened investor relationships and contributed to marketing strategy improvements.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div>
-              <div class="timeline-header">
-                <span class="timeline-title">Customer Support &amp; Sales Agent</span>
-                <span class="timeline-date">Feb 2021 – Apr 2022</span>
-              </div>
-              <span class="timeline-sub">Fido · Montreal, Canada</span>
-              <ul class="timeline-bullets">
-                <li>Trained and coached new agents to ensure sales targets were met.</li>
-                <li>Analyzed customer data across Citrix, LiveZilla, Cisco, and ICM to improve retention.</li>
-              </ul>
-            </div>
+        <div>
+          <span class="skill-category-label">Tools &amp; IDEs</span>
+          <div class="skill-tags">
+            <span>VS Code</span><span>IntelliJ</span><span>Eclipse</span>
+            <span>MATLAB</span><span>Git</span><span>Photoshop</span><span>AutoCAD</span>
           </div>
         </div>
-      </section>
+        <div>
+          <span class="skill-category-label">Languages</span>
+          <div class="skill-tags">
+            <span>French — Native</span><span>English — Professional</span><span>Arabic — Intermediate</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </div><!-- /page-content -->
-  </div><!-- /container -->
+    <!-- Education -->
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <div class="timeline-header">
+              <span class="timeline-title">B.Sc. Computer Science Joint Major Data Science</span>
+              <span class="timeline-date">2024 – 2027</span>
+            </div>
+            <span class="timeline-sub">Concordia University · Montreal, Canada</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <div class="timeline-header">
+              <span class="timeline-title">DEC, Business Management</span>
+              <span class="timeline-date">2021 – 2023</span>
+            </div>
+            <span class="timeline-sub">Collège Ahuntsic · Montreal, Canada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <div class="timeline-header">
+              <span class="timeline-title">Sales Representative</span>
+              <span class="timeline-date">July 2024 – Present</span>
+            </div>
+            <span class="timeline-sub">Bravad Technologies · Montreal, Canada</span>
+            <ul class="timeline-bullets">
+              <li>Advised customers on TELUS/Koodo products, plans, and device upgrades.</li>
+              <li>Consistently ranked top 3 seller; managed end-to-end sales workflows including onboarding and after-sales support.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <div class="timeline-header">
+              <span class="timeline-title">Marketing Coordinator — New Construction</span>
+              <span class="timeline-date">Feb 2024 – June 2024</span>
+            </div>
+            <span class="timeline-sub">OSL Bell Canada · Montreal, Canada</span>
+            <ul class="timeline-bullets">
+              <li>Delivered Bell Canada services to new construction clients with personalized follow-ups.</li>
+              <li>Strengthened investor relationships and contributed to marketing strategy improvements.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div>
+            <div class="timeline-header">
+              <span class="timeline-title">Customer Support &amp; Sales Agent</span>
+              <span class="timeline-date">Feb 2021 – Apr 2022</span>
+            </div>
+            <span class="timeline-sub">Fido · Montreal, Canada</span>
+            <ul class="timeline-bullets">
+              <li>Trained and coached new agents to ensure sales targets were met.</li>
+              <li>Analyzed customer data across Citrix, LiveZilla, Cisco, and ICM to improve retention.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 </body>
 </html>

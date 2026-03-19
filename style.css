@@ -140,12 +140,36 @@ header {
   color: #333;
 }
 
-/* ===== Inner Pages ===== */
-.page-content {
-  padding: 20px 6% 60px;
+/* ===== Inner Pages (full-page, no glass card) ===== */
+body.inner {
+  padding: 0;
+  background-attachment: fixed;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 7%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.full-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 7% 100px;
   display: flex;
   flex-direction: column;
-  gap: 52px;
+  gap: 64px;
 }
 
 .section-title {

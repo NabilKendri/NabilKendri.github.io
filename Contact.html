@@ -8,90 +8,83 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="container">
-    <header>
-      <a href="index.html" class="logo">Portfolio.</a>
-      <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="About.html">About</a>
-        <a href="Portfolio.html">Portfolio</a>
-        <a href="Contact.html" class="active">Contact</a>
-      </nav>
-    </header>
+<body class="inner">
 
-    <div class="page-content">
-      <section>
-        <h2 class="section-title">Get In Touch</h2>
+  <header class="site-header">
+    <a href="index.html" class="logo">Portfolio.</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Portfolio.html">Portfolio</a>
+      <a href="Contact.html" class="active">Contact</a>
+    </nav>
+  </header>
 
-        <div class="contact-layout">
+  <main class="full-page">
+    <section>
+      <h2 class="section-title">Get In Touch</h2>
 
-          <!-- Left: info -->
-          <div class="contact-info">
-            <h3>Let's connect.</h3>
-            <p>
-              Whether it's a project collaboration, a job opportunity, or just a conversation about data
-              and AI — I'm always open to hearing from you.
-            </p>
-            <ul class="contact-details">
-              <li>
-                <i class="ri-mail-line"></i>
-                <a href="mailto:kendrinabilelkhalil@hotmail.com">kendrinabilelkhalil@hotmail.com</a>
-              </li>
-              <li>
-                <i class="ri-phone-line"></i>
-                +1 (438) 354-4400
-              </li>
-              <li>
-                <i class="ri-map-pin-line"></i>
-                Montreal, Canada
-              </li>
-            </ul>
-            <div class="contact-socials">
-              <a href="https://github.com/NabilKendri" target="_blank" rel="noopener" aria-label="GitHub">
-                <i class="ri-github-fill"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/nabil-kendri/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="ri-linkedin-fill"></i>
-              </a>
-            </div>
+      <div class="contact-layout">
+
+        <div class="contact-info">
+          <h3>Let's connect.</h3>
+          <p>
+            Whether it's a project collaboration, a job opportunity, or just a conversation about
+            data and AI — I'm always open to hearing from you.
+          </p>
+          <ul class="contact-details">
+            <li>
+              <i class="ri-mail-line"></i>
+              <a href="mailto:kendrinabilelkhalil@hotmail.com">kendrinabilelkhalil@hotmail.com</a>
+            </li>
+            <li>
+              <i class="ri-phone-line"></i>
+              +1 (438) 354-4400
+            </li>
+            <li>
+              <i class="ri-map-pin-line"></i>
+              Montreal, Canada
+            </li>
+          </ul>
+          <div class="contact-socials">
+            <a href="https://github.com/NabilKendri" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="ri-github-fill"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nabil-kendri/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="ri-linkedin-fill"></i>
+            </a>
           </div>
-
-          <!-- Right: form -->
-          <!--
-            To make this form actually send emails:
-            1. Sign up free at https://formspree.io
-            2. Create a new form and copy your endpoint ID
-            3. Replace YOUR_FORM_ID below with that ID
-               e.g. action="https://formspree.io/f/abcdefgh"
-          -->
-          <form
-            class="contact-form"
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            method="POST"
-          >
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="What's this about?">
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-
         </div>
-      </section>
-    </div><!-- /page-content -->
-  </div><!-- /container -->
+
+        <!--
+          To make this form send emails:
+          1. Sign up free at https://formspree.io
+          2. Create a form and copy your endpoint ID
+          3. Replace YOUR_FORM_ID below
+        -->
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
 </body>
 </html>
