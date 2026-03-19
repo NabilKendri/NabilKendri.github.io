@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Nabil Kendri</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="index.html" class="logo">Portfolio.</a>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Portfolio.html" class="active">Portfolio</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <div class="page-content">
+      <section>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">
+          A selection of work spanning ML systems, data engineering, and software development.
+        </p>
+        <!-- Cards are rendered by projects.js — no HTML changes needed to add projects -->
+        <div class="projects-grid" id="projects-grid"></div>
+      </section>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- Load data, then render -->
+  <script src="projects.js"></script>
+  <script>
+    const grid = document.getElementById('projects-grid');
+
+    projects.forEach(function(p) {
+      const tags = p.tags.map(function(t) {
+        return '<span class="proj-tag">' + t + '</span>';
+      }).join('');
+
+      const githubBtn = p.github
+        ? '<a href="' + p.github + '" target="_blank" rel="noopener" class="proj-link"><i class="ri-github-fill"></i> Code</a>'
+        : '';
+
+      const demoBtn = p.demo
+        ? '<a href="' + p.demo + '" target="_blank" rel="noopener" class="proj-link proj-link--demo"><i class="ri-external-link-line"></i> Live Demo</a>'
+        : '';
+
+      const links = (githubBtn || demoBtn)
+        ? '<div class="proj-links">' + githubBtn + demoBtn + '</div>'
+        : '';
+
+      grid.innerHTML +=
+        '<div class="project-card">' +
+          '<div class="proj-header">' +
+            '<span class="proj-title">' + p.title + '</span>' +
+            '<span class="proj-date">' + p.date + '</span>' +
+          '</div>' +
+          '<div class="proj-tags">' + tags + '</div>' +
+          '<p class="proj-desc">' + p.description + '</p>' +
+          links +
+        '</div>';
+    });
+  </script>
+</body>
+</html>
